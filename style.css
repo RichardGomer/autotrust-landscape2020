@@ -1,0 +1,311 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    font-size: 12pt;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+    color: #000;
+    background: #fff;
+}
+
+body > section, header, footer {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+section {
+
+}
+
+section p, ul, ol {
+    max-width: 800px;
+    line-height: 1.5em;
+}
+
+header, footer {
+    background: #222;
+    color: #fff;
+}
+
+
+footer {
+    text-align: right;
+    padding-right: 120px;
+}
+
+footer img {
+    width: 200px;
+    margin: 30px 40px 30px 40px;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    margin-top: 2em;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2em;
+    margin-left: -80px;
+    margin-right: -80px;
+    padding: 100px 80px 20px 80px;
+    background: #666;
+    color: #fff;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+h4 {
+    font-size: 1.2em;
+    text-decoration: underline;
+}
+
+li {
+    margin-bottom: 7px;
+}
+
+/* Questions for readers */
+ol.questions {
+    padding: 20px 20px 20px 40px;
+    border: 1px solid #baa71e;
+    background: #fff8c7;
+}
+
+.questions::before {
+    content: "We'd like to know";
+    display: block;
+    font-weight: 400;
+    font-size: 0.8em;
+    color: #59593a;
+    padding: 0 0 10px 0;
+}
+
+/* Definitions */
+p.term {
+    padding: 20px 20px 20px 40px;
+    border: 1px solid #977dba;
+    background: #e4d4fa;
+}
+
+p.term strong {
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
+
+/* Research questions */
+.rq {
+    padding: 20px 20px 20px 40px;
+    border: 1px solid #8db87b;
+    background: #e0fad4;
+}
+
+.rq::before {
+    content: "Research Objective";
+    display: block;
+    font-weight: 400;
+    font-size: 0.8em;
+    color: #455c3c;
+    padding: 0 0 10px 0;
+}
+
+span.quote {
+    font-style: italic;
+}
+
+.comparison {
+    border: 1px solid #aaa;
+    padding: 10px;
+    border-top: 30px solid #aaa;
+}
+
+.comparison::after {
+    content: " ";
+    display: block;
+    clear: both;
+}
+
+.comparison > div {
+    width: 50%;
+    margin: 0;
+    padding: 10px;
+    float: left;
+}
+
+.comparison ul, li {
+    width: auto;
+}
+
+.comparison h4 {
+    margin-top: 10px;
+}
+
+section#arch_quads {
+
+}
+
+section#arch_quads section {
+    width: 50%;
+    float: left;
+    margin: 0;
+    padding: 20px;
+}
+
+section#arch_quads section:nth-of-type(1) {
+    background: rgba(66,90,245,0.1);
+}
+
+section#arch_quads section:nth-of-type(2) {
+    background: rgba(66,245,164,0.1);
+}
+
+section#arch_quads section:nth-of-type(3) {
+    background: rgba(170,245,66,0.1);
+}
+
+section#arch_quads section:nth-of-type(4) {
+    background: rgba(245,197,66,0.1);
+}
+
+section#arch_quads p {
+    width: auto;
+}
+
+section#arch_quads::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/**
+ * Scenarios
+ */
+span.intx-point, span.inf-point, span.auto-point, span.vuln-point {
+    display: inline-block;
+    padding: 2px;
+    font-size: 10pt;
+    font-weight: bold;
+    color: #fff;
+}
+
+span.intx-point:before {
+    content: "Interaction Point";
+    background: #965ef7;
+    padding: 3px 7px 3px 7px;
+    display: inline-block;
+}
+
+span.inf-point:before {
+    content: "Information Point";
+    background: #67cf75;
+    padding: 3px 7px 3px 7px;
+    display: inline-block;
+}
+
+span.vuln-point:before {
+    content: "Vulnerability Point";
+    background: #f75e9e;
+    padding: 3px 7px 3px 7px;
+    display: inline-block;
+}
+
+span.auto-point:before {
+    content: "Automation Point";
+    background: #5ea8f7;
+        padding: 3px 7px 3px 7px;
+    display: inline-block;
+}
+
+ul.stakeholders {
+
+}
+
+#stakeholders p.stakeholder {
+    border: 1px solid #ccc;
+    padding: 7px;
+}
+
+#stakeholders p.stakeholder span {
+    display: block;
+    margin: 2px 0 2px 0;
+}
+
+#stakeholders p.stakeholder span.name::before {
+    display: none;
+}
+
+#stakeholders p.stakeholder span.activities::before {
+    content: "Activities";
+}
+
+#stakeholders p.stakeholder span.motives::before {
+    content: "Motives";
+}
+
+#stakeholders p.stakeholder span.levers::before {
+    content: "Means of Influence";
+}
+
+#stakeholders p.stakeholder span.needs::before {
+    content: "Needs";
+}
+
+#stakeholders p.stakeholder span::before {
+    display: inline-block;
+    font-size: 0.7em;
+    content: " ";
+    padding: 2px 6px 2px 6px;
+    margin-right: 10px;
+    border-radius: 4px;
+    background: #999;
+    color: #fff;
+    font-weight: bold;
+}
+
+#scenarios section > h3 {
+    padding: 100px 20px 20px 20px;
+    background: #333;
+    color: #fff;
+    position: relative;
+    margin: 0 0 30px 0 !important;
+}
+
+#scenarios section > h3:before {
+    content: "vignette";
+    display: block;
+    position: absolute;
+    top: 10px;
+    font-size: 0.8em;
+    font-weight: 600;
+    opacity: 0.5;
+}
+
+#scenarios section {
+    border: 1px solid #333;
+    margin-top: 40px;
+}
+
+#scenarios section > * {
+    margin-left: 20px;
+    margin-right: 20px;
+}
