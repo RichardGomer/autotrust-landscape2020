@@ -6,8 +6,11 @@
 <title>The AutoTrust IoV Landscape</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;1,300;1,500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css" type="text/css">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+        crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -19,6 +22,16 @@
         "theme": "clean"
       };
     };
+
+    $().ready(function(){
+        var $cul = $("<ul></ul>").appendTo($('#contents'));
+
+        $('section > h2').each(function(i, h) {
+            var $section = $($(h).parents('section')[0]);
+            console.log($section);
+            $('<li><a href="#' + $section.attr('id') + '">' + $(h).text() + '</a></li>').appendTo($cul);
+        })
+    })
     </script>
 
 <!-- Body content -->
@@ -27,6 +40,9 @@
 <p>The landscape, stakeholders and possible futures of the Internet of Vehicles</p>
 </header>
 
+<section id="contents">
+
+</section>
 
 <section id="intro">
     <h2>Introduction</h2>
@@ -316,6 +332,81 @@
         </section>
     </section>
 </section>
+
+<section id="loops">
+    <h2>Humans in the Loop(s)</h2>
+
+    <p>The idea of having a "human in the loop" when it comes to automated processing is well established in some fields; for instance, the GDPR gives people a specific
+    right not to be subject to wholly automated decision making. In autonomous vehicle design, the role of humans and automated features working together is reflected in
+    SAE International's "levels of driving automation".</p>
+
+    <p>Intuitively, it feels right that people should be involved - to some degree - in processes that shape their lives; but how can we apply that idea to the IoV?
+        How can we make sense of all the different systems and the complexity that could be involved? As a starting point, we've identified a series of different
+    "loops" - each associated with a specific aspect of the IoV. A loop is a group of related tasks that will combine human and automated agency in the near future. Each
+    loop is what Paul Leonardi terms an "imbrication" &mdash; a mixture of human and automated agency that are established in response to needs and opportunities.</p>
+
+    <p>We’ve aimed to identify the essential characteristics of each loop, and important issues, stakeholders and technologies within each.</p>
+
+    <ol class="questions">
+      <li>Are these loops important, and are the descriptions detailed enough to understand what they mean?</li>
+      <li>Are these loops likely to involve a significant amount of automation?</li>
+      <li>Are there other significant loops that should be added, or should any of these loops be broken down further?</li>
+    </ol>
+
+    <h3>Task Loop</h3>
+    <p>The Task loop defines and shapes the task that’s being carried out.
+      For example, the task loop might plan when and where to purchase groceries; or decide whether to "grab some odds and ends" from the corner shop or do a "big shop" at the hypermarket.
+      This loop is still mostly a human task in 2020, but imbrication with technology could change that in the future.
+      For instance, technology in the task loop might identify the need to carry out specific tasks, or opportunistically suggest how routine tasks could be incorporated into a schedule or journey.
+      Subtler influences on a person’s tasks, such as advertising or promoting particular destinations, are also included in this loop.</p>
+
+    <p class="example"></p>
+
+    <h3>Journey Loop</h3>
+    <p>The journey loop plans and executes aspects of a journey in support of identified tasks.
+        It might need to choose a transport mode, identify a route, plan modal interchanges or purchase tickets.
+        In 2020 we’re used to using satellite navigation to plan a car journey for us, or using journey planners to suggest public transport routes to a destination.</p>
+
+
+    <h3>Operating Loop</h3>
+    <p>The operating loop controls a vehicle.
+        The operating loop is relatively well defined, and models like SAE International's "levels of driving automation" show how different combinations of human and automation agency might work.
+        Interaction challenges here are about co-ordinating human and automated control in a safe way, potentially while travelling at speed!</p>
+
+
+    <h3>Co-Ordination Loop</h3>
+    <p>The co-ordination loop is concerned with how a vehicle or journey is co-ordinated with other people or vehicles.
+        Co-ordination at a journey level could be as simple as car sharing, but could also include demand-responsive public transport systems or congestion-control mechanisms like spreading load across a transport network.
+    <p>At an operational level, co-ordination could control vehicle behaviours like platooning or giving priority to emergency service vehicles.</p>
+    <p>Interaction challenges here might involve fairness, the need to respect individual preferences, and how to balance the needs of individual transiteers against those of the wider community.
+        In whose interests is my journey being co-ordinated?</p>
+
+
+    <h3>Maintenance Loop</h3>
+    <p>Maintenance is an important part of owning or operating a vehicle or transport system.
+        This loop maintains the vehicle by planning and undertaking scheduled or emergency maintenance tasks like checking the tyres, changing engine oil,
+        greasing a chain, or installing a software update.</p>
+
+
+    <h3>Admin Loop</h3>
+    <p>There are administrative tasks associated with transport.
+        Vehicle owners and operators need to buy insurance, pay taxes, pay tolls for using certain roads, and arrange for safety or operating licenses.
+        Public transport users need to purchase tickets and might need to maintain membership of discount or frequent-traveller schemes.</p>
+    <p>Some of these tasks – like purchasing insurance, or transport tickets – could be changed by the introduction of automation.</p>
+
+
+    <h3>Footprint Loop</h3>
+    <p>Finally, what we call the “Footprint Loop” involves management of the digital exhaust of connected transport systems; the data traces that our journeys leave behind.
+    <p>Those digital traces will often be personal data – linked back to individuals – and potentially allow detailed information about individuals to be gleaned.
+        Digital traces will also have valuable and legitimate uses such as informing transport policy, helping operators to deliver efficient public transport services,
+        or personalising services so that they meet individual needs.</p>
+    <p>Data subjects have certain rights to manage the data that’s collected about them, though; perhaps infrequently, or perhaps actively and deliberately.
+        Interaction challenges in this loop include helping individuals to make decisions about data sharing and data logging in advance,
+        helping individuals understand how their data is being used and what risks that might entail for them,
+        and helping trustworthy data users to build trust in their services with users who might be reluctant to share data that they don’t understand.</p>
+
+</section>
+
 
 <section id="scenarios">
 
