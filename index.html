@@ -18,7 +18,7 @@
     <script>
     window.hypothesisConfig = function () {
       return {
-        "openSidebar": true,
+        "openSidebar": false,
         "theme": "clean"
       };
     };
@@ -76,6 +76,7 @@
 </section>
 
 <section id="stakeholders">
+    <img src="vehicles-header.png" alt="" class="header" />
     <h2>IoV Stakeholders</h2>
     <section id="stakeholders_intro">
         <p>Transportation touches almost every aspect of our lives, and so the stakeholders are numerous. In this section, we aim to provide a description of the important stakeholders that need to be included in the design of the IoV.</p>
@@ -211,6 +212,7 @@
 </section>
 
 <section id="architecture">
+    <img src="arch-header.png" alt="" class="header" />
     <h2>IoV Architecture</h2>
 
     <p>The broad design principles that underlie the IoV will shape how it develops and how vehicles (and their passengers) relate to the rest of the transport system. In conversations, the biggest architectural questions have been the relative “intelligence” of vehicles versus infrastructure, and the homogeneity of the infrastructure. We've used those two axes to discuss how different architectural decisions might shape the IoV and change its affordances for different stakeholders.</p>
@@ -334,6 +336,9 @@
 </section>
 
 <section id="loops">
+
+    <img src="loops-header.png" alt="" class="header" />
+
     <h2>Humans in the Loop(s)</h2>
 
     <p>The idea of having a "human in the loop" when it comes to automated processing is well established in some fields; for instance, the GDPR gives people a specific
@@ -354,6 +359,7 @@
     </ol>
 
     <h3>Task Loop</h3>
+    <img src="icons/loop-task.png" alt="" class="icon" />
     <p>The Task loop defines and shapes the task that’s being carried out.
       For example, the task loop might plan when and where to purchase groceries; or decide whether to "grab some odds and ends" from the corner shop or do a "big shop" at the hypermarket.
       This loop is still mostly a human task in 2020, but imbrication with technology could change that in the future.
@@ -363,18 +369,21 @@
     <p class="example"></p>
 
     <h3>Journey Loop</h3>
+    <img src="icons/loop-journey.png" alt="" class="icon" />
     <p>The journey loop plans and executes aspects of a journey in support of identified tasks.
         It might need to choose a transport mode, identify a route, plan modal interchanges or purchase tickets.
         In 2020 we’re used to using satellite navigation to plan a car journey for us, or using journey planners to suggest public transport routes to a destination.</p>
 
 
     <h3>Operating Loop</h3>
+    <img src="icons/loop-operate.png" alt="" class="icon" />
     <p>The operating loop controls a vehicle.
         The operating loop is relatively well defined, and models like SAE International's "levels of driving automation" show how different combinations of human and automation agency might work.
         Interaction challenges here are about co-ordinating human and automated control in a safe way, potentially while travelling at speed!</p>
 
 
     <h3>Co-Ordination Loop</h3>
+    <img src="icons/loop-coord.png" alt="" class="icon" />
     <p>The co-ordination loop is concerned with how a vehicle or journey is co-ordinated with other people or vehicles.
         Co-ordination at a journey level could be as simple as car sharing, but could also include demand-responsive public transport systems or congestion-control mechanisms like spreading load across a transport network.
     <p>At an operational level, co-ordination could control vehicle behaviours like platooning or giving priority to emergency service vehicles.</p>
@@ -383,12 +392,14 @@
 
 
     <h3>Maintenance Loop</h3>
+    <img src="icons/loop-maint.png" alt="" class="icon" />
     <p>Maintenance is an important part of owning or operating a vehicle or transport system.
         This loop maintains the vehicle by planning and undertaking scheduled or emergency maintenance tasks like checking the tyres, changing engine oil,
         greasing a chain, or installing a software update.</p>
 
 
     <h3>Admin Loop</h3>
+    <img src="icons/loop-admin.png" alt="" class="icon" />
     <p>There are administrative tasks associated with transport.
         Vehicle owners and operators need to buy insurance, pay taxes, pay tolls for using certain roads, and arrange for safety or operating licenses.
         Public transport users need to purchase tickets and might need to maintain membership of discount or frequent-traveller schemes.</p>
@@ -396,6 +407,7 @@
 
 
     <h3>Footprint Loop</h3>
+    <img src="icons/loop-data.png" alt="" class="icon" />
     <p>Finally, what we call the “Footprint Loop” involves management of the digital exhaust of connected transport systems; the data traces that our journeys leave behind.
     <p>Those digital traces will often be personal data – linked back to individuals – and potentially allow detailed information about individuals to be gleaned.
         Digital traces will also have valuable and legitimate uses such as informing transport policy, helping operators to deliver efficient public transport services,

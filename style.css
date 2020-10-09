@@ -19,22 +19,23 @@ body {
 }
 
 body > section, header, footer {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 1px; /* prevent margin collapsing */
+    padding-bottom: 40px;
 
     padding-left: 80px;
     padding-right: 80px;
 }
 
 section {
-
+    overflow: hidden;
+    position: relative;
 }
 
 body > section:nth-of-type(2n) {
     background: rgba(0,0,0,0.05);
 }
 
-section p, ul, ol {
+section p, section ul, section ol {
     max-width: 800px;
     line-height: 1.5em;
 }
@@ -44,6 +45,9 @@ header, footer {
     color: #fff;
 }
 
+section img.header {
+
+}
 
 footer {
     text-align: right;
@@ -61,6 +65,14 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 300;
     margin-top: 1.5em;
     margin-bottom: 0.8em;
+}
+
+section img.header + h2 {
+    margin-top: 10px;
+}
+
+body > section > :last-child {
+    margin-bottom: 80px;
 }
 
 h1 {
@@ -204,6 +216,15 @@ section#arch_quads::after {
     content: "";
     display: block;
     clear: both;
+}
+
+/**
+ * loops
+ */
+section#loops img.icon {
+    width: 130px;
+    position: absolute;
+    left: 900px;
 }
 
 /**
