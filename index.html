@@ -358,20 +358,24 @@
       <li>Are there other significant loops that should be added, or should any of these loops be broken down further?</li>
     </ol>
 
+<!-- VY: added "identify whether ..." to the task loop. -->
+
     <h3>Task Loop</h3>
     <img src="icons/loop-task.png" alt="" class="icon" />
     <p>The Task loop defines and shapes the task that’s being carried out.
-      For example, the task loop might plan when and where to purchase groceries; or decide whether to "grab some odds and ends" from the corner shop or do a "big shop" at the hypermarket.
+      For example, the task loop might plan when and where to purchase groceries; identify whether it is feasible to form a mixed team of (human and artificial) agents to perform a task; or decide whether to "grab some odds and ends" from the corner shop or do a "big shop" at the hypermarket.
       This loop is still mostly a human task in 2020, but imbrication with technology could change that in the future.
       For instance, technology in the task loop might identify the need to carry out specific tasks, or opportunistically suggest how routine tasks could be incorporated into a schedule or journey.
       Subtler influences on a person’s tasks, such as advertising or promoting particular destinations, are also included in this loop.</p>
 
     <p class="example"></p>
 
+<!-- VY: added "verification ..." to the journey loop. -->
+
     <h3>Journey Loop</h3>
     <img src="icons/loop-journey.png" alt="" class="icon" />
     <p>The journey loop plans and executes aspects of a journey in support of identified tasks.
-        It might need to choose a transport mode, identify a route, plan modal interchanges or purchase tickets.
+        It might need to choose a transport mode, identify a route, plan modal interchanges, verify if a given travel plan is safe, or purchase tickets.
         In 2020 we’re used to using satellite navigation to plan a car journey for us, or using journey planners to suggest public transport routes to a destination.</p>
 
 
@@ -381,14 +385,16 @@
         The operating loop is relatively well defined, and models like SAE International's "levels of driving automation" show how different combinations of human and automation agency might work.
         Interaction challenges here are about co-ordinating human and automated control in a safe way, potentially while travelling at speed!</p>
 
+<!-- VY: added "responsibility ..." to the coordination loop. -->
 
     <h3>Co-Ordination Loop</h3>
     <img src="icons/loop-coord.png" alt="" class="icon" />
     <p>The co-ordination loop is concerned with how a vehicle or journey is co-ordinated with other people or vehicles.
         Co-ordination at a journey level could be as simple as car sharing, but could also include demand-responsive public transport systems or congestion-control mechanisms like spreading load across a transport network.
     <p>At an operational level, co-ordination could control vehicle behaviours like platooning or giving priority to emergency service vehicles.</p>
-    <p>Interaction challenges here might involve fairness, the need to respect individual preferences, and how to balance the needs of individual transiteers against those of the wider community.
+    <p>Interaction challenges here might involve fairness, the need to respect individual preferences, the need to effectively distribute responsibilities in human-agent groups, and how to balance the needs of individual transiteers against those of the wider community.
         In whose interests is my journey being co-ordinated?</p>
+	
 
 
     <h3>Maintenance Loop</h3>
@@ -397,13 +403,16 @@
         This loop maintains the vehicle by planning and undertaking scheduled or emergency maintenance tasks like checking the tyres, changing engine oil,
         greasing a chain, or installing a software update.</p>
 
+<!-- VY: added an accountability-related  part -->
 
     <h3>Admin Loop</h3>
     <img src="icons/loop-admin.png" alt="" class="icon" />
     <p>There are administrative tasks associated with transport.
         Vehicle owners and operators need to buy insurance, pay taxes, pay tolls for using certain roads, and arrange for safety or operating licenses.
         Public transport users need to purchase tickets and might need to maintain membership of discount or frequent-traveller schemes.</p>
-    <p>Some of these tasks – like purchasing insurance, or transport tickets – could be changed by the introduction of automation.</p>
+    <p>Some of these tasks – like purchasing insurance, or transport tickets – could be changed by the introduction of automation. </p>
+
+	<p> Interaction challenges here might involve the need for identifying  accountability gaps for delegated tasks and the extent of individual's responsibility for potential failures. Who is to what extent accountable if an automated ticket or insurance purchasing process fails?  </p>
 
 
     <h3>Footprint Loop</h3>
@@ -574,6 +583,52 @@
         </ol>
 
     </section>
+
+
+<!-- VY: added a new responsibility-related vignette -->
+
+
+ <section id="scen_patching">
+        <h3>Responsibility Reasoning in the IoV</h3>
+        <p>In an intersection, a crash takes place in which various connected vehicles (from different manufactures) and  some traditional human-driven vehicles are directly involved. It is clear that the  collective is responsible for the  incident but it is not clear who is to what extent responsible.    </p>
+        <p>In addition to directly involved vehicles, various actors are involved indirectly including those who developed softwares that vehicles use and those who designed the intersection and its traffic management (e.g., the smart traffic light).  </p>
+        <p>These (in)directly involved actors could act differently to avoid such an undesired situation. 
+         </p>
+        
+		
+		<p>The vehicle manufacturer could:</p>
+        <ul>
+            <li>Ensure that vehicles are (not merely focused on optimal ways to deliver tasks but also)  capable of reasoning about responsibilities for such incidents. <span class="auto-point"></span></li>
+            <li>To established standard communication protocols for minimal inter-manufacturer communication of preferences. <span class="auto-point"></span></li>
+			<li>Put in place mechanisms to inform the keeper of the vehicle and other vehicles about their responsibilities for entering an intersection. <span class="inf-point"></span> </li>
+        </ul>
+
+<p>The vehicle users could:</p>
+        <ul>
+            <li>Inform the vehicle about their preferences on how to act in cases of safety-optimality trade-off (e.g., when reaching earlier to a destination may increase the probability of harm). The vehicle reflects the user's understanding of responsible behavior.<span class="intx-point"></span></li>
+        </ul>
+
+
+<p>In response to the already materialized crash, we need ways to fairly ascribe responsibilities as decision support tools to assist legal and regulatory bodies. </p>
+
+        <p>A regulatory body can:</p>
+        <ul>
+            <li>Put in place incentives to encourage the use of responsibility-aware vehicles.</li> 
+			<li>Establish regulations capable of ascribing liabilities in cases where agency is flexibly changing between humans and connected vehicles.</li> 
+        </ul>
+
+        <ol class="questions">
+            <li>In these scenarios, should we only ascribe responsibility to human drivers or is it reasonable to ascribe a degree of responsibility to vehicle developers or infrastructure designers? </li>
+            <li>How reasoning about responsibilities can help avoiding such scenarios?</li>
+			<li>What legal principles are applicable for sharing liabilities in such scenarios?</li>
+			<li>How responsibility reasoning can help formulating effective IoV regulations? </li>
+            <li>A failure may lead to disastrous chains of failures. How we can use responsibility reasoning to ensure resiliency (fault tolerance) in the IoV? </li>
+        </ol>
+
+    </section>
+
+
+
 
     <!--<section id="scen_dynamic_pubtrans">
     </section>
